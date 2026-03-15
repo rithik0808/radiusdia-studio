@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Initialize EmailJS with Public Key
+    // You will need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("YOUR_PUBLIC_KEY");
+    }
+
     const form = document.getElementById('contactForm');
     if (!form) return;
 
@@ -10,37 +16,30 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.textContent = 'Sending...';
         btn.disabled = true;
 
-        const data = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
+        const templateParams = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
             message: document.getElementById('message').value,
+            to_email: 'radiusdiastudio@gmail.com'
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:3000/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-            });
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS IDs
+            const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
 
-            const result = await response.json();
-
-            if (result.success) {
+            if (response.status === 200) {
                 btn.textContent = '✓ Message Sent!';
                 btn.style.backgroundColor = '#2d6a4f';
                 btn.style.color = '#fff';
                 form.reset();
             } else {
-                btn.textContent = '✗ Failed. Try again.';
-                btn.style.backgroundColor = '#c0392b';
-                btn.style.color = '#fff';
-                console.error('Server error:', result.message);
+                throw new Error('EmailJS Error');
             }
         } catch (err) {
-            btn.textContent = '✗ Could not connect to server';
+            btn.textContent = '✗ Failed to send';
             btn.style.backgroundColor = '#c0392b';
             btn.style.color = '#fff';
-            console.error('Network error:', err);
+            console.error('Email error:', err);
         }
 
         setTimeout(() => {
