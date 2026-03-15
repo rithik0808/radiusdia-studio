@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Horizon House | Radiusdia Studio</title>
+    <meta name="description"
+        content="A detailed look at The Horizon House, a residential architecture project by Radiusdia Studio.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .project-hero {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .project-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-meta {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            padding: 4rem 0;
+            margin-top: -10vh;
+            position: relative;
+            z-index: 10;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .meta-title h1 {
+            color: var(--bg-color);
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .meta-category {
+            color: var(--accent-color);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+        }
+
+        .meta-item h4 {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-item p {
+            color: var(--bg-color);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+        }
+
+        .project-content h2 {
+            position: sticky;
+            top: 100px;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .project-gallery img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .gallery-full {
+            grid-column: 1 / -1;
+            aspect-ratio: 16/9 !important;
+        }
+
+        @media (max-width: 992px) {
+            .meta-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .meta-title {
+                grid-column: 1 / -1;
+                margin-bottom: 1rem;
+            }
+
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+
+            .project-content h2 {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/residential_project_1_1772898502453.png"
+                alt="The Horizon House Hero">
+        </section>
+
+        <section class="project-meta">
+            <div class="container meta-grid fade-up">
+                <div class="meta-title">
+                    <span class="meta-category">Residential</span>
+                    <h1>The Horizon House</h1>
+                </div>
+                <div class="meta-item">
+                    <h4>Client</h4>
+                    <p>Private</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Location</h4>
+                    <p>Karur, India</p>
+                </div>
+                <div class="meta-item">
+                    <h4>Year</h4>
+                    <p>2023</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-content fade-up">
+                <div>
+                    <h2>Seamless integration of structure and nature.</h2>
+                </div>
+                <div>
+                    <p>The Horizon House explores the delicate balance between robust architectural form and the
+                        surrounding natural landscape. Situated on a sloped terrain, the residence utilizes massive
+                        concrete walls to anchor the structure, while extensive use of glass dissolves the barrier
+                        between interior and exterior spaces.</p>
+                    <p>Materiality played a crucial role in the design. Warm-toned wood siding juxtaposes the cool,
+                        board-formed concrete, creating a tactile experience that evolves with the sun's passage
+                        throughout the day. The minimalist approach eliminates visual clutter, allowing the architecture
+                        itself to become a serene backdrop for the clients' lifestyle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container project-gallery fade-up">
+                <!-- Using placeholder images to demonstrate the layout -->
+                <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/modern_architecture_hero_1772898285911.png"
+                    class="gallery-full" alt="Gallery Image 1">
+                <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/interior_project_1_1772898604254.png"
+                    alt="Gallery Image 2">
+                <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/residential_project_1_1772898502453.png"
+                    alt="Gallery Image 3">
+            </div>
+
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="projects.html" class="btn">Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... same as index ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a
+                            href="projects.html">Projects</a><a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar, 1st Cross</li>
+                        <li>Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

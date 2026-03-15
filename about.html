@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Radiusdia Studio</title>
+    <meta name="description"
+        content="Learn about Radiusdia Studio, an innovative architecture firm led by Principal Architect Rithik. We craft modern, minimal spaces.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .page-header {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .ceo-profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .ceo-image {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .philosophy-item {
+            padding: 2.5rem;
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-fast);
+        }
+
+        .philosophy-item:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-color: transparent;
+        }
+
+        @media (max-width: 992px) {
+            .ceo-profile {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container fade-up">
+                <h1>About the Studio</h1>
+                <p style="margin: 0 auto;">Designing the intersection of function and form.</p>
+            </div>
+        </section>
+
+        <!-- CEO Profile -->
+        <section class="section">
+            <div class="container ceo-profile fade-up">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Rithik - Principal Architect Radiusdia Studio" class="ceo-image">
+                </div>
+                <div>
+                    <span class="section-subtitle">Leadership</span>
+                    <h2>Meet Rithik</h2>
+                    <p><strong>Founder & Principal Architect of Radiusdia Studio</strong></p>
+                    <p>With a passion for minimalist aesthetics and deeply functional design, Rithik founded Radiusdia
+                        Studio to push the boundaries of modern architecture. Under his vision, the studio has grown
+                        into a premier team of designers creating transformative spaces across India.</p>
+                    <p>"Our goal is not just to build structures, but to craft environments that evoke emotion and stand
+                        the test of time."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision and Philosophy -->
+        <section class="section" style="background-color: var(--light-gray);">
+            <div class="container">
+                <div class="text-center fade-up">
+                    <span class="section-subtitle">Our Ethos</span>
+                    <h2>Vision & Philosophy</h2>
+                </div>
+
+                <div class="philosophy-grid fade-up">
+                    <div class="philosophy-item">
+                        <h3>Minimalism</h3>
+                        <p>We believe in stripping away the unnecessary, focusing on essential forms, light, and
+                            materials to create pristine, unburdened spaces.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Sustainability</h3>
+                        <p>Our designs integrate seamlessly with their environment, prioritizing sustainable materials
+                            and energy-efficient building practices.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Innovation</h3>
+                        <p>We continuously explore new techniques, pushing architectural boundaries to deliver unique,
+                            modern living and working experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... same as index ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a
+                            href="projects.html">Projects</a><a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar, 1st Cross</li>
+                        <li>Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

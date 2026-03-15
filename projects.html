@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Radiusdia Studio</title>
+    <meta name="description"
+        content="Explore the architectural portfolio of Radiusdia Studio. Residential, Commercial, and Interior design projects.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .page-header {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .filter-nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: var(--transition-fast);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+            text-underline-offset: 8px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container fade-up">
+                <h1>Selected Works</h1>
+                <p style="margin: 0 auto;">Our portfolio of crafted environments.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="filter-nav fade-up">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Residential</button>
+                    <button class="filter-btn">Commercial</button>
+                    <button class="filter-btn">Interior Design</button>
+                </div>
+
+                <div class="portfolio-grid fade-up">
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/residential_project_1_1772898502453.png"
+                                alt="The Horizon House">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Residential</span>
+                            <h3 class="project-title">The Horizon House</h3>
+                        </div>
+                    </a>
+
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/commercial_project_1_1772898537745.png"
+                                alt="Nexus Corporate Center">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Commercial</span>
+                            <h3 class="project-title">Nexus Corporate Center</h3>
+                        </div>
+                    </a>
+
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/interior_project_1_1772898604254.png"
+                                alt="Aura Penthouse">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Interior Design</span>
+                            <h3 class="project-title">Aura Penthouse</h3>
+                        </div>
+                    </a>
+
+                    <!-- Additional placeholder for symmetry -->
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/modern_architecture_hero_1772898285911.png"
+                                alt="Lakeside Retreat">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Residential</span>
+                            <h3 class="project-title">Lakeside Retreat</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... same as index ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a
+                            href="projects.html">Projects</a><a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar, 1st Cross</li>
+                        <li>Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

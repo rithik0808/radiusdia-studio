@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Radiusdia Studio</title>
+    <meta name="description"
+        content="Get in touch with Radiusdia Studio in Karur, Tamil Nadu. We look forward to discussing your next architectural project.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .page-header {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+        }
+
+        .contact-info-block {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-block h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-block p,
+        .contact-info-block a {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        .contact-info-block a:hover {
+            color: var(--text-primary);
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--light-gray);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--text-primary);
+            background-color: #fff;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 500px;
+            background-color: var(--light-gray);
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .map-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 992px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container fade-up">
+                <h1>Contact Us</h1>
+                <p style="margin: 0 auto;">Let's discuss your next architectural endeavor.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container contact-section fade-up">
+                <div>
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2 style="margin-bottom: 3rem;">Start a Conversation</h2>
+
+                    <div class="contact-info-block">
+                        <h3>Our Studio</h3>
+                        <p>No. 14, Sanjai Nagar<br>
+                            1st Cross, Near Karur Polytechnic<br>
+                            Karur – 639002<br>
+                            Tamil Nadu, India</p>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <h3>Connect</h3>
+                        <p>Company: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a><br>
+                            Personal: <a href="mailto:rithikthirum@gmail.com">rithikthirum@gmail.com</a><br>
+                            Phone: <a href="tel:+918903998441">+91 89039 98441</a></p>
+                    </div>
+
+                    <div class="contact-info-block">
+                        <h3>Social</h3>
+                        <div class="social-links" style="margin-top: 0.5rem;">
+                            <a href="https://www.instagram.com/radius_dia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required
+                                placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="johndoe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid" style="width: 100%; justify-content: center;">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map Placeholder -->
+            <div class="container">
+                <div class="map-container fade-up">
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.472535650122!2d78.082725!3d10.957591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDU3JzI3LjMiTiA3OMKwMDQnNTcuOCJF!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... same as index ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a
+                            href="projects.html">Projects</a><a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar, 1st Cross</li>
+                        <li>Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/form_handler.js"></script>
+</body>
+
+</html>

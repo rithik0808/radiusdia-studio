@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiusdia Studio | Innovative Architecture & Design</title>
+    <meta name="description"
+        content="Radiusdia Studio is a modern architecture and design firm based in Karur, Tamil Nadu. We specialize in residential, commercial, and interior design with a minimal and clean approach.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- Inline styles for page-specific elements to keep it clean -->
+    <style>
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-color);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: kenburns 20s ease-out infinite alternate;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        @keyframes kenburns {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 2rem;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .hero-content h1 {
+            color: var(--bg-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .btn {
+            border-color: var(--bg-color);
+            color: var(--bg-color);
+        }
+
+        .hero .btn::after {
+            background-color: var(--bg-color);
+        }
+
+        .hero .btn:hover {
+            color: var(--text-primary);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        /* Featured Projects Grid Override for Home */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 992px) {
+            .intro-section {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <!-- Using the generated hero image -->
+                <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/modern_architecture_hero_1772898285911.png"
+                    alt="Modern Architecture House at Dusk">
+            </div>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <img src="img/logo.png" alt="Radiusdia Studio Logo" style="height: 120px; width: auto; margin: 0 auto 2rem auto; display: block;">
+                <h1>Radiusdia Studio</h1>
+                <p>Innovative Architecture & Design</p>
+                <a href="projects.html" class="btn">View Projects</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section">
+            <div class="container intro-section fade-up">
+                <div class="intro-content">
+                    <span class="section-subtitle">About Us</span>
+                    <h2>Shaping the future through timeless design.</h2>
+                    <p>Radiusdia Studio is a premier architecture and design firm based in Karur, India. We believe that
+                        exceptional architecture is born from a deep understanding of its environment, its users, and
+                        its purpose.</p>
+                    <p>Led by Founder & Principal Architect Rithik, our studio is dedicated to creating minimal,
+                        elegant, and innovative spaces that inspire and elevate everyday life.</p>
+                    <a href="about.html" class="btn btn-solid" style="margin-top: 1rem;">Discover Our Vision</a>
+                </div>
+                <div class="intro-image">
+                    <!-- Placeholder interior image generated soon -->
+                    <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/interior_project_1_1772898516024.png"
+                        alt="Radiusdia Studio Interior Design"
+                        onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section" style="background-color: var(--light-gray);">
+            <div class="container">
+                <div class="flex" style="justify-content: space-between; align-items: flex-end;">
+                    <div>
+                        <span class="section-subtitle fade-up">Selected Works</span>
+                        <h2 class="fade-up" style="margin-bottom: 0;">Featured Projects</h2>
+                    </div>
+                    <a href="projects.html" class="btn fade-up">All Projects</a>
+                </div>
+
+                <div class="featured-grid fade-up">
+                    <!-- Project 1 -->
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/residential_project_1_1772898502453.png"
+                                alt="The Horizon House">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Residential</span>
+                            <h3 class="project-title">The Horizon House</h3>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/commercial_project_1_1772898516024.png"
+                                alt="Nexus Corporate Center"
+                                onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Commercial</span>
+                            <h3 class="project-title">Nexus Corporate Center</h3>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="project-detail.html" class="project-card">
+                        <div class="project-image-wrapper">
+                            <img src="/Users/logitht/.gemini/antigravity/brain/e2ab1d63-37ab-40bb-a8b5-0ed02b3e9061/interior_project_1_1772898516024.png"
+                                alt="Aura Penthouse"
+                                onerror="this.src='https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-category">Interior Design</span>
+                            <h3 class="project-title">Aura Penthouse</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="services.html">Services</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar</li>
+                        <li>1st Cross, Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                        <li>Tamil Nadu, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/radius_dia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

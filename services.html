@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Radiusdia Studio</title>
+    <meta name="description"
+        content="Architecture, Interior Design, Urban Planning, and 3D Visualization services by Radiusdia Studio.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        .page-header {
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .service-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            padding: 3rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-fast);
+        }
+
+        .service-row:hover {
+            background-color: var(--light-gray);
+            padding-left: 4rem;
+        }
+
+        .service-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .service-desc {
+            margin: 0;
+            font-size: 1.125rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-row {
+                grid-template-columns: 1fr;
+                padding: 2rem 0;
+            }
+
+            .service-row:hover {
+                background-color: transparent;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container" style="display: flex; align-items: center;">
+                <img src="img/logo.png" alt="Radiusdia Studio" class="logo-img" style="height: 40px; width: auto;">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container fade-up">
+                <h1>Our Services</h1>
+                <p style="margin: 0 auto;">Comprehensive design solutions for a modern world.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container services-list fade-up">
+                <div class="service-row">
+                    <h2 class="service-title">Architectural Design</h2>
+                    <p class="service-desc">Complete architectural solutions from initial concept to completion. We
+                        design residential and commercial builds with a focus on cutting-edge minimalism and structural
+                        integrity.</p>
+                </div>
+
+                <div class="service-row">
+                    <h2 class="service-title">Interior Design</h2>
+                    <p class="service-desc">Crafting the spaces within. We curate materials, lighting, and spatial flow
+                        to ensure interiors perfectly complement the architectural vision while serving the client's
+                        needs.</p>
+                </div>
+
+                <div class="service-row">
+                    <h2 class="service-title">Urban Planning</h2>
+                    <p class="service-desc">Designing for the macro scale. We develop master plans for communities and
+                        developments, prioritizing sustainability, mobility, and community wellness.</p>
+                </div>
+
+                <div class="service-row">
+                    <h2 class="service-title">3D Visualization</h2>
+                    <p class="service-desc">Photorealistic rendering and virtual tours allowing clients to fully
+                        experience and refine designs before a single brick is laid.</p>
+                </div>
+
+                <div class="service-row" style="border-bottom: none;">
+                    <h2 class="service-title">Consultation</h2>
+                    <p class="service-desc">Expert advice on site selection, feasibility studies, and navigating complex
+                        zoning laws for ambitious architectural projects.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer ... same as index ... -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Radiusdia Studio</h2>
+                    <p>Innovative Architecture & Design firm led by Principal Architect Rithik, creating timeless
+                        spaces.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a><a href="about.html">About</a><a
+                            href="projects.html">Projects</a><a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-contact">
+                        <li>Email: <a href="mailto:radiusdiastudio@gmail.com">radiusdiastudio@gmail.com</a></li>
+                        <li>Phone: <a href="tel:+918903998441">+91 89039 98441</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Address</h3>
+                    <ul class="footer-contact">
+                        <li>No. 14, Sanjai Nagar, 1st Cross</li>
+                        <li>Near Karur Polytechnic</li>
+                        <li>Karur – 639002</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Radiusdia Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
