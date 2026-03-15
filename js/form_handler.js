@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize EmailJS with Public Key
-    // You will need to replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init("YOUR_PUBLIC_KEY");
-    }
-
     const form = document.getElementById('contactForm');
     if (!form) return;
 
@@ -13,40 +7,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const btn = form.querySelector('button[type="submit"]');
         const originalText = btn.textContent;
+        
+        // Show loading state
         btn.textContent = 'Sending...';
         btn.disabled = true;
 
-        const templateParams = {
-            from_name: document.getElementById('name').value,
-            from_email: document.getElementById('email').value,
-            message: document.getElementById('message').value,
-            to_email: 'radiusdiastudio@gmail.com'
-        };
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
         try {
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual EmailJS IDs
-            const response = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams);
+            const response = await fetch('https://formsubmit.co/ajax/radiusdiastudio@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
 
-            if (response.status === 200) {
+            const result = await response.json();
+
+            if (result.success === "true") {
                 btn.textContent = '✓ Message Sent!';
-                btn.style.backgroundColor = '#2d6a4f';
+                btn.style.backgroundColor = '#2d6a4f'; // Green success
                 btn.style.color = '#fff';
                 form.reset();
             } else {
-                throw new Error('EmailJS Error');
+                throw new Error('FormSubmit Error');
             }
         } catch (err) {
             btn.textContent = '✗ Failed to send';
-            btn.style.backgroundColor = '#c0392b';
+            btn.style.backgroundColor = '#c0392b'; // Red error
             btn.style.color = '#fff';
             console.error('Email error:', err);
         }
 
+        // Reset button after 4 seconds
         setTimeout(() => {
             btn.textContent = originalText;
             btn.disabled = false;
             btn.style.backgroundColor = '';
             btn.style.color = '';
-        }, 4000);
+        }, 5000);
     });
 });
