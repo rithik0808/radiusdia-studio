@@ -7,7 +7,7 @@
 
 :root {
   /* Colors */
-  --bg-color: orange;
+  --bg-color: #c0c0c0;
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --accent-color: #c4a173; /* Elegant muted gold/bronze for architecture */
@@ -170,7 +170,7 @@ ul, ol {
 
 .btn-solid {
   background-color: white;
-  color: orange;
+  color: #1a1a1a;
   border-color: white;
 }
 
